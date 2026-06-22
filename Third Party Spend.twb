@@ -1,0 +1,689 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0710.1712                               -->
+<workbook original-version='18.1' source-build='2025.2.1 (20252.25.0710.1712)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend) (digital_marketing)' inline='true' name='federated.1323b070h3n5821dy9njj1tahi0f' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='radius-datawarehouse-production.radius.com' name='redshift.1p57wqz04j2if610z4wr60w2cc4f'>
+            <connection authentication='auth-user-pass' class='redshift' dbname='radiusdw' odbc-connect-string-extras='' one-time-sql='' port='5439' schema='digital_marketing' server='radius-datawarehouse-production.radius.com' show-other-databases='' single-node='' sslmode='require' username='charnroberts' />
+          </named-connection>
+        </named-connections>
+        <relation connection='redshift.1p57wqz04j2if610z4wr60w2cc4f' name='stg_fuel_marketing_spend' table='[digital_marketing].[stg_fuel_marketing_spend]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[stg_fuel_marketing_spend]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>amount_local</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[amount_local]</local-name>
+            <parent-name>[stg_fuel_marketing_spend]</parent-name>
+            <remote-alias>amount_local</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_FLOAT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>currency</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[currency]</local-name>
+            <parent-name>[stg_fuel_marketing_spend]</parent-name>
+            <remote-alias>currency</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[stg_fuel_marketing_spend]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lead_channel</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[lead_channel]</local-name>
+            <parent-name>[stg_fuel_marketing_spend]</parent-name>
+            <remote-alias>lead_channel</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>200</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lead_sub_channel</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[lead_sub_channel]</local-name>
+            <parent-name>[stg_fuel_marketing_spend]</parent-name>
+            <remote-alias>lead_sub_channel</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>200</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>source_tracksource</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[source_tracksource]</local-name>
+            <parent-name>[stg_fuel_marketing_spend]</parent-name>
+            <remote-alias>source_tracksource</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>200</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>source_trackmedium</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[source_trackmedium]</local-name>
+            <parent-name>[stg_fuel_marketing_spend]</parent-name>
+            <remote-alias>source_trackmedium</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>200</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>submittee</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[submittee]</local-name>
+            <parent-name>[stg_fuel_marketing_spend]</parent-name>
+            <remote-alias>submittee</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>200</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='stg_fuel_marketing_spend' datatype='table' name='[__tableau_internal_object_id__].[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]' role='measure' type='quantitative' />
+      <column caption='Amount Local' datatype='real' name='[amount_local]' role='measure' type='quantitative' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Currency' datatype='string' name='[currency]' role='dimension' type='nominal' />
+      <column caption='Lead Channel' datatype='string' name='[lead_channel]' role='dimension' type='nominal' />
+      <column caption='Lead Sub Channel' datatype='string' name='[lead_sub_channel]' role='dimension' type='nominal' />
+      <column caption='Month' datatype='datetime' name='[month]' role='dimension' type='ordinal' />
+      <column caption='Source Trackmedium' datatype='string' name='[source_trackmedium]' role='dimension' type='nominal' />
+      <column caption='Source Tracksource' datatype='string' name='[source_tracksource]' role='dimension' type='nominal' />
+      <column caption='Submittee' datatype='string' name='[submittee]' role='dimension' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='V:/Commercial Finance/9 UK Business Partnering/7 Tableau Workbooks/7 Extracts/stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend) (digital_marketing).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='06/22/2026 07:51:44 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend) (digital_marketing)' increment-value='%null%' refresh-type='create' rows-inserted='490' timestamp-start='2026-06-22 07:51:43.607' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>country</remote-alias>
+              <ordinal>0</ordinal>
+              <family>stg_fuel_marketing_spend</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>amount_local</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[amount_local]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>amount_local</remote-alias>
+              <ordinal>1</ordinal>
+              <family>stg_fuel_marketing_spend</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>431</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>currency</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[currency]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>currency</remote-alias>
+              <ordinal>2</ordinal>
+              <family>stg_fuel_marketing_spend</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>month</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month</remote-alias>
+              <ordinal>3</ordinal>
+              <family>stg_fuel_marketing_spend</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lead_channel</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[lead_channel]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lead_channel</remote-alias>
+              <ordinal>4</ordinal>
+              <family>stg_fuel_marketing_spend</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lead_sub_channel</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[lead_sub_channel]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lead_sub_channel</remote-alias>
+              <ordinal>5</ordinal>
+              <family>stg_fuel_marketing_spend</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>36</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>source_tracksource</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[source_tracksource]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>source_tracksource</remote-alias>
+              <ordinal>6</ordinal>
+              <family>stg_fuel_marketing_spend</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>source_trackmedium</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[source_trackmedium]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>source_trackmedium</remote-alias>
+              <ordinal>7</ordinal>
+              <family>stg_fuel_marketing_spend</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>submittee</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[submittee]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>submittee</remote-alias>
+              <ordinal>8</ordinal>
+              <family>stg_fuel_marketing_spend</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>27</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='stg_fuel_marketing_spend' id='stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend)_9A082A8A21334BF3A5AE482FEEE957BC'>
+            <properties context=''>
+              <relation connection='redshift.1p57wqz04j2if610z4wr60w2cc4f' name='stg_fuel_marketing_spend' table='[digital_marketing].[stg_fuel_marketing_spend]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='stg_fuel_marketing_spend (digital_marketing.stg_fuel_marketing_spend) (digital_marketing)' name='federated.1323b070h3n5821dy9njj1tahi0f' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1323b070h3n5821dy9njj1tahi0f'>
+            <column caption='Amount Local' datatype='real' name='[amount_local]' role='measure' type='quantitative' />
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Currency' datatype='string' name='[currency]' role='dimension' type='nominal' />
+            <column caption='Lead Channel' datatype='string' name='[lead_channel]' role='dimension' type='nominal' />
+            <column caption='Lead Sub Channel' datatype='string' name='[lead_sub_channel]' role='dimension' type='nominal' />
+            <column caption='Month' datatype='datetime' name='[month]' role='dimension' type='ordinal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[currency]' derivation='None' name='[none:currency:nk]' pivot='key' type='nominal' />
+            <column-instance column='[lead_channel]' derivation='None' name='[none:lead_channel:nk]' pivot='key' type='nominal' />
+            <column-instance column='[lead_sub_channel]' derivation='None' name='[none:lead_sub_channel:nk]' pivot='key' type='nominal' />
+            <column-instance column='[month]' derivation='None' name='[none:month:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[source_trackmedium]' derivation='None' name='[none:source_trackmedium:nk]' pivot='key' type='nominal' />
+            <column-instance column='[source_tracksource]' derivation='None' name='[none:source_tracksource:nk]' pivot='key' type='nominal' />
+            <column caption='Source Trackmedium' datatype='string' name='[source_trackmedium]' role='dimension' type='nominal' />
+            <column caption='Source Tracksource' datatype='string' name='[source_tracksource]' role='dimension' type='nominal' />
+            <column-instance column='[amount_local]' derivation='Sum' name='[sum:amount_local:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1323b070h3n5821dy9njj1tahi0f].[sum:amount_local:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1323b070h3n5821dy9njj1tahi0f].[none:country:nk] / ([federated.1323b070h3n5821dy9njj1tahi0f].[none:currency:nk] / ([federated.1323b070h3n5821dy9njj1tahi0f].[none:lead_channel:nk] / ([federated.1323b070h3n5821dy9njj1tahi0f].[none:lead_sub_channel:nk] / ([federated.1323b070h3n5821dy9njj1tahi0f].[none:month:ok] / ([federated.1323b070h3n5821dy9njj1tahi0f].[none:source_trackmedium:nk] / [federated.1323b070h3n5821dy9njj1tahi0f].[none:source_tracksource:nk]))))))</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{2A21C549-457F-420F-82CE-0B82AF41C3A5}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='240'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='46'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1323b070h3n5821dy9njj1tahi0f].[none:country:nk]</field>
+            <field>[federated.1323b070h3n5821dy9njj1tahi0f].[none:currency:nk]</field>
+            <field>[federated.1323b070h3n5821dy9njj1tahi0f].[none:lead_channel:nk]</field>
+            <field>[federated.1323b070h3n5821dy9njj1tahi0f].[none:lead_sub_channel:nk]</field>
+            <field>[federated.1323b070h3n5821dy9njj1tahi0f].[none:month:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{BFA2F682-9EF9-4F17-A451-052068834CC6}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      gg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
