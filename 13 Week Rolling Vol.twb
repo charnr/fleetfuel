@@ -78,7 +78,7 @@ and product_name IN(&apos;AD BLUE&apos;,&apos;DIESEL&apos;, &apos;UNLEADED&apos;
 group by cust_surr_id, iso_week, product_name&#13;
 ) tfwc&#13;
 LEFT OUTER JOIN (&#13;
-	SELECT caldate, isowk::VARCHAR FROM calendar where DATE_PART(&apos;dow&apos;, caldate)= 6&#13;
+	SELECT MAX(caldate) AS caldate, isowk::VARCHAR AS isowk FROM calendar where DATE_PART(&apos;dow&apos;, caldate)= 6 GROUP BY isowk::VARCHAR&#13;
 ) a  ON tfwc.iso_week = a.isowk</relation>
             </relation>
             <relation connection='redshift.05ex8lu19j7rpq1cq3a590i82jiv' name='live_allocations' table='[fuel_dw].[live_allocations]' type='table' />
@@ -1734,7 +1734,7 @@ and product_name IN(&apos;AD BLUE&apos;,&apos;DIESEL&apos;, &apos;UNLEADED&apos;
 group by cust_surr_id, iso_week, product_name&#13;
 ) tfwc&#13;
 LEFT OUTER JOIN (&#13;
-	SELECT caldate, isowk::VARCHAR FROM calendar where DATE_PART(&apos;dow&apos;, caldate)= 6&#13;
+	SELECT MAX(caldate) AS caldate, isowk::VARCHAR AS isowk FROM calendar where DATE_PART(&apos;dow&apos;, caldate)= 6 GROUP BY isowk::VARCHAR&#13;
 ) a  ON tfwc.iso_week = a.isowk</relation>
                   </relation>
                   <relation connection='redshift.05ex8lu19j7rpq1cq3a590i82jiv' name='live_allocations' table='[fuel_dw].[live_allocations]' type='table' />
